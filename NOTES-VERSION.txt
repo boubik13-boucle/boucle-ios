@@ -1,0 +1,36 @@
+BOUCLE — Version 3.2 : compositions variées et navigation améliorée
+
+Nouveautés :
+- Les trois propositions de l'Assistant ont maintenant des mélodies, rythmes, basses et accompagnements réellement différents.
+- Chaque proposition choisit une combinaison d'instruments distincte selon l'ambiance, en conservant l'instrument demandé pour la première idée.
+- Les cartes affichent les instruments utilisés dans chaque arrangement.
+- Deux flèches flottantes permettent de remonter en haut ou descendre en bas de la page. Elles n'apparaissent que lorsqu'un déplacement est utile.
+- Pendant la lecture, les pistes contenant des motifs actifs sont regroupées en haut de la grille. L'ordre initial est rétabli à l'arrêt.
+- Toucher le nom d'un instrument dans la colonne des pistes sélectionne la piste et joue une note d'aperçu.
+
+Conservé :
+- samples.js et la banque GeneralUser GS sont inchangés.
+- Les correctifs de volume individuel et de barre de transport fixe sont conservés.
+- Le Studio, la bibliothèque de mélodies, les instruments, les échantillons et les autres fonctions existantes sont conservés.
+
+Vérifications :
+- Syntaxe JavaScript contrôlée avec Node.js.
+- Génération contrôlée pour les six ambiances : trois arrangements différents, trois instruments distincts par arrangement, quatre mesures de 16 pas.
+- Archive ZIP testée après création.
+
+Installation :
+- Décompresser le ZIP puis envoyer tous les fichiers du dossier dans le même projet Cloudflare Pages, en remplacement de la V3.1.
+- Recharger Boucle sur l'iPhone. Le cache du service worker a été versionné pour forcer la mise à jour.
+
+
+Correctif V3.2.1 — défilement tactile iPhone :
+- Les boutons de pas du Studio n’interdisent plus les gestes tactiles verticaux.
+- Le défilement vertical de la page est explicitement autorisé sur iOS.
+- Le déplacement horizontal des notes reste disponible via les événements pointeur.
+
+
+V3.3 – Choix musicaux enrichis
+- Ajout de 8 styles : pop, rock, électro, folk acoustique, jazz, funk, orchestral et ambient.
+- Ajout de 5 grooves : varié, régulier, swing, lent et entraînant.
+- Les trois propositions utilisent des rythmes, motifs, basses et accompagnements distincts, avec des palettes d’instruments adaptées au style.
+- Banque samples.js, navigation, studio et corrections de défilement conservés.

@@ -1,0 +1,3 @@
+Boucle utilise des échantillons rendus depuis GeneralUser GS v2.0.3 de S. Christian Collins.
+Banque originale : GeneralUser GS — https://schristiancollins.com/generaluser.php
+Les échantillons intégrés sont dérivés de cette banque ; consulter GENERALUSER-LICENSE.txt pour les conditions d’utilisation et d’attribution.
