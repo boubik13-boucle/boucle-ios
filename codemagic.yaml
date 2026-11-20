@@ -1,0 +1,35 @@
+
+workflows:
+  boucle-ios:
+    name: Boucle - Première compilation iPhone
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+
+    environment:
+      node: 22.14.0
+      xcode: latest
+
+    scripts:
+      - name: Installer les dépendances
+        script: npm install
+
+      - name: Créer le projet iOS
+        script: npx cap add ios
+
+      - name: Synchroniser Boucle
+        script: npx cap sync ios
+
+      - name: Compiler pour iPhone
+        script: |
+          xcodebuild \
+            -project ios/App/App.xcodeproj \
+            -scheme App \
+            -sdk iphonesimulator \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/ios \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+    artifacts:
+      - build/ios/Build/Products/Debug-iphonesimulator/*.app
